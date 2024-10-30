@@ -1,5 +1,4 @@
 # app/urls/urls_patterns
-from app.urls.url_patterns.assistant_templates import get_assistant_templates
 from app.urls.url_patterns.base_layouts import get_base_layout_patterns
 from app.urls.url_patterns.info_pages import get_info_pages
 from app.urls.url_patterns.media_files import get_media_files
@@ -14,7 +13,6 @@ def set_urls_patterns():
         **get_base_layout_patterns(ext),
         **get_weather_templates(ext),
         **get_info_pages(ext),
-        **get_assistant_templates(ext),
         **get_static_files(),
         **get_media_files(),
         "index": {

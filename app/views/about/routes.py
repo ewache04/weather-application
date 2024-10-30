@@ -2,7 +2,6 @@
 from flask import render_template, session
 
 from app.views.about import about_blueprint
-from utils.assistant.assistant_mode.assistant_mode import inactivate_assistant_mode
 from utils.sessions.session_utils import update_session
 
 
@@ -22,9 +21,6 @@ def about():
     context = {
         'url_patterns': url_patterns,
     }
-
-    # Update assistant mode to inactive
-    inactivate_assistant_mode()
 
     # Pass URL patterns and other context to the template
     return render_template(

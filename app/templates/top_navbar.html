@@ -13,12 +13,6 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="nav navbar-nav navbar-right">
 
-
-                {% if weather_data %}
-                    <li>
-                        <a href="{{ url_patterns['assistant']['redirect'] }}" onclick="showLoadingIndicator()">AI-Analysis</a>
-                    </li>
-                {% endif %}
                 <li><a href="{{ url_patterns['about']['redirect'] }}">About Company</a></li>
 
                 <li><a href="{{ url_patterns['our_team']['redirect'] }}">Our Team</a></li>

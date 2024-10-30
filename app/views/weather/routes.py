@@ -2,7 +2,6 @@
 from flask import render_template, request, session
 
 from app.views.weather import weather_blueprint
-from utils.assistant.assistant_mode.assistant_mode import inactivate_assistant_mode
 from utils.location.get_user_location import get_user_ip_location
 from utils.sessions.session_utils import update_session, create_session
 from utils.weather.process_weather_data import process_weather_data
@@ -65,8 +64,5 @@ def weather():
         'country': country,
         'url_patterns': url_patterns
     }
-
-    # Update assistant mode to inactive
-    inactivate_assistant_mode()
 
     return render_template(weather_template, **context)
