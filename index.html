@@ -1,2 +1,24 @@
-<!-- Include the weather details using Modal Structure -->
-{% include url_patterns['weather']['render'] %}
+<!-- app/templates/index.html -->
+{% extends url_patterns['base']['render'] %}
+
+{% block content %}
+    <!-- Main Welcome Section -->
+    <div class="container-fluid text-center main-section">
+        <h2>Welcome to {{ session.get('app_name') }}!</h2>
+        <p>Your one-stop solution for weather updates and information.</p>
+
+        <div class="row text-center slideanim">
+            <div class="col-sm-12">
+                <div class="thumbnail">
+                    <a href="{{ url_patterns['weather']['redirect'] }}" class="btn btn-primary">Check Weather</a>
+                </div>
+            </div>
+        </div>
+
+        <br>
+    </div>
+    <br>
+
+    <!-- Include the home button if necessary -->
+    {% include url_patterns['home_button']['render'] %}
+{% endblock %}
